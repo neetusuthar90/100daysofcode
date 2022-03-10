@@ -9,11 +9,13 @@ numbers = [
 ]
 
 # your code goes here
-n = numbers.index(237)
-for number in numbers[0:n]:
+#n = numbers.index(237)
+#for number in numbers[0:n]:
+for number in numbers:
     if number%2 == 0:
             print(number)
-            
+    if number == 237:
+        break        
    
             
     
