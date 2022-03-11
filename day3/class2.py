@@ -13,11 +13,22 @@ class Account:
         if amount<Decimal('0.00'):
             raise ValueError('Amout must be positive')
         self.balance += amount
-
-
-account1 = Account('Liptan',Decimal('50.00'))
+    
+    """Withdrawing money"""
+    def withdraw(self, money):
+        if money>self.balance:
+            raise ValueError('Withdraw amount must be less than or equal to balance')
+        elif money == Decimal('0.00'):
+            raise ValueError('Withdraw amount must be positive')
+        self.balance -= money
+name = input('Enter account holder name:')
+val1 = float(input('Enter the account balance:'))
+account1 = Account('Liptan',Decimal(val1))
 print(account1.balance)
 print(account1.name)
-account1.deposite(Decimal('145.75'))
+val2 = float(input('Enter deposite amount:'))
+account1.deposite(Decimal(val2))
+val3 = float(input('Enter the windraw amount:'))
+account1.withdraw(Decimal(val3))
 print(account1.balance)
-account1.deposite(Decimal('-200.00'))
+
