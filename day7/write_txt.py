@@ -1,7 +1,4 @@
 """Formation of txt file and write data into that file"""
-from numpy import dtype
-
-
 with open('accounts.txt', mode = 'w') as account:  
     account.write('100 Liptan 78.909\n')
     account.write('200 Neetu 60.89\n')
