@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#inc
+#include <stdlib.h>
 
 void update(int *a,int *b) {
     // Complete this function 
